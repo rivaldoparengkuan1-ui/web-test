@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT. Sparkling Clean</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Poppins', sans-serif; }
+
+    .navbar {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 20px;
+      background:white;
+      position:sticky;
+      top:0;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo img {
+      width:35px;
+      height:35px;
+      object-fit:contain;
+      opacity:0.85;
+    }
+
+    .logo span {
+      font-weight:600;
+      font-size:18px;
+      color:#333;
+    }
+
+    .menu a {
+      margin:0 10px;
+      text-decoration:none;
+      color:#333;
+      cursor:pointer;
+      position:relative;
+      transition:0.3s;
+    }
+
+    .menu a:hover { color:#2a5298; }
+    .menu a:active { transform: scale(0.9); }
+
+    .menu a.active { color:#2a5298; font-weight:600; }
+
+    .hero {
+      background: linear-gradient(rgba(30,60,114,0.7), rgba(42,82,152,0.7)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952');
+      background-size: cover;
+      background-position: center;
+      color:white;
+      text-align:center;
+      padding:120px 20px;
+    }
+
+    .content {
+      padding:40px 20px;
+      max-width:900px;
+      margin:auto;
+      min-height:400px;
+    }
+
+    .section { display:none; opacity:0; transform:translateY(20px); transition: all 0.5s ease; }
+    .section.active { display:block; opacity:1; transform:translateY(0); }
+
+    .box {
+      background:#f5f5f5;
+      padding:25px;
+      border-radius:15px;
+      margin-bottom:20px;
+      text-align:left;
+    }
+
+    .services-grid {
+      display:grid;
+      grid-template-columns:1fr;
+      gap:15px;
+      margin-top:15px;
+    }
+
+    .service-card {
+      background:white;
+      padding:15px;
+      border-radius:10px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-card {
+      display:flex;
+      align-items:center;
+      gap:15px;
+      background:white;
+      padding:20px;
+      border-radius:15px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .icon {
+      font-size:30px;
+      background:#2a5298;
+      color:white;
+      padding:15px;
+      border-radius:50%;
+    }
+
+    footer {
+      text-align:center;
+      padding:15px;
+      background:#222;
+      color:white;
+      margin-top:40px;
+    }
+
+    @media(min-width:768px){
+      .services-grid { grid-template-columns:repeat(2,1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <!-- GANTI LOGO DISINI -->
+      <img src="image/logo jasa.jpg" alt="Logo">
+      <span>Sparkling Clean</span>
+    </div>
+
+    <div class="menu">
+      <a onclick="showSection('about')" class="active">About</a>
+      <a onclick="showSection('services')">Services</a>
+      <a onclick="showSection('contact')">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>PT. Sparkling Clean</h1>
+    <p>Jasa kebersihan rumah profesional & terpercaya</p>
+  </header>
+
+  <div class="content">
+
+    <!-- ABOUT -->
+    <div id="about" class="section active">
+      <div class="box">
+        <img src="image/about img.jpg" style="width:100%; border-radius:10px; margin-bottom:15px;">
+        <h2>Tentang Kami</h2>
+        <p><b>PT. Sparkling Clean</b> merupakan perusahaan jasa kebersihan rumah yang berdiri sejak 8 Februari 2021. Kami hadir untuk memberikan solusi kebersihan yang praktis, profesional, dan terpercaya bagi setiap rumah tangga.</p>
+        <br>
+        <p>Dengan pengalaman dan tim yang terlatih, kami berkomitmen untuk menjaga kebersihan serta kenyamanan hunian Anda.</p>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div id="services" class="section">
+      <div class="box">
+        <h2>Layanan Kami</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" style="width:100%; border-radius:10px; margin-bottom:10px;">
+            <b>Pembersihan Rumah Menyeluruh</b>
+          </div>
+          <div class="service-card">
+            <img src="image/jasa kebersihan.jpg" style="width:100%; border-radius:10px; margin-bottom:10px;">
+            <b>Pembersihan Area Tertentu</b>
+          </div>
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" style="width:100%; border-radius:10px; margin-bottom:10px;">
+            <b>Layanan Berkala</b>
+          </div>
+          <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac" style="width:100%; border-radius:10px; margin-bottom:10px;">
+            <b>Layanan Fleksibel</b>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="section">
+      <div class="box">
+        <h2>Contact</h2>
+        <div class="contact-card">
+          <div class="icon">📍</div>
+          <div>
+            <h3>Alamat Kantor</h3>
+            <p>Jl. Contoh No.123, Kota Anda, Indonesia</p>
+            <a href="https://maps.google.com/?q=Jl.+Contoh+No.123" target="_blank">Lihat di Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 PT. Sparkling Clean</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      const links = document.querySelectorAll('.menu a');
+
+      sections.forEach(sec => sec.classList.remove('active'));
+      links.forEach(link => link.classList.remove('active'));
+
+      document.getElementById(id).classList.add('active');
+
+      links.forEach(link => {
+        if (link.textContent.toLowerCase() === id) {
+          link.classList.add('active');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
